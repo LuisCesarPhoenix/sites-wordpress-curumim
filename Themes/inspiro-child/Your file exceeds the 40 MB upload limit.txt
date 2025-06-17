@@ -1,0 +1,36 @@
+Como resolver o erro?
+"Your file exceeds the 40 MB upload limit set by your host.
+Our Unlimited Extension bypasses this!
+If you prefer a manual fix, follow our step-by-step guide on raising your upload limit."
+
+✅ Soluções manuais:
+
+✔️ Passo 1: Localize seu arquivo php.ini
+Se você usa XAMPP:
+
+Local: C:\xampp\php\php.ini
+Ou abra o xampp, clique no botão config do apache e escolha a opção PHP(php.ini)
+
+Se você usa OwnCloud, Wordpress ou outro ambiente PHP no Docker:
+No container, o arquivo normalmente está em /etc/php/8.x/apache2/php.ini (varia de acordo com a versão).
+
+✔️ Passo 2: Edite os parâmetros de upload
+Procure essas linhas no php.ini e aumente os valores:
+
+upload_max_filesize = 512M
+post_max_size = 512M
+max_execution_time = 600
+max_input_time = 600
+memory_limit = 1024M
+
+🔸 Explicação rápida:
+upload_max_filesize → Tamanho máximo de um único arquivo.
+post_max_size → Tamanho máximo da requisição inteira.
+memory_limit → Memória permitida para execução do script PHP.
+max_execution_time e max_input_time → Tempo máximo (em segundos) que o script pode rodar (útil para uploads grandes).
+
+✔️ Passo 3: Reinicie seu servidor Apache
+No XAMPP, clique em Stop → Start no Apache.
+
+No Docker, use:
+docker restart nome_do_container

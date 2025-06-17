@@ -1,0 +1,55 @@
+.video-custom {
+  width: 25.5cm;       /* Define largura fisicamente aproximada */
+  height: 14cm;        /* Define altura fisicamente aproximada */
+  margin: 0 auto;      /* Centraliza horizontalmente */
+  overflow: hidden;    /* Evita barras de rolagem internas */
+}
+
+.video-custom iframe {
+  width: 100%;         /* Preenche todo o contêiner */
+  height: 100%;        /* Preenche toda a altura do contêiner */
+  display: block;      /* Remove espaços em branco indesejados */
+  border: none;        /* Sem bordas no player */
+}
+
+/* Mobile: até 600px de largura */
+@media (max-width: 600px) {
+  .video-custom {
+    width: 95vw;       /* quase full-viewport width */
+    aspect-ratio: 24 / 13.5;
+  }
+}
+
+/* Tablet: até 900px */
+@media (max-width: 900px) {
+  .video-custom {
+    width: 85vw;
+    aspect-ratio: 24 / 13.5;
+  }
+}
+
+/* Telas largas: até 1200px de largura */
+@media (min-width: 1200px) {
+  .video-custom {
+    max-width: 100%;    /* Pode até limitar em px se quiser */
+  }
+}
+
+.pagina-inicial {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #7A7A7A;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-left: 4px solid #ff7a00;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin: 30px auto;
+  max-width: 900px; /* Limita a largura */
+}
+
+.pagina-inicial p {
+  margin-bottom: 15px;
+  text-align: justify;
+}

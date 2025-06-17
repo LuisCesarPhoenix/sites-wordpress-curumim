@@ -1,0 +1,20 @@
+Identidade do site
+
+Texto do logotipo personalizado: AEC
+Título do site: associacao-espaco-curumim
+Descrição: no
+Mostrar o título do site e descrição: no
+Sua página inicial exibe: Uma página estática
+Enable Hero Area on the Homepage: no
+Full Height on Mobile Devices: yes
+Show Dark Overlay: yes
+Hero Title: associacao-espaco-curumim
+Abrir link em uma nova guia: yes
+
+Header Menu
+Menu Background: #7f1ba0
+Menu Background on Scroll: #7f1ba0
+
+Hero Button Background Color on Hover: #0bb4aa
+
+Widget Link: #0bb4aa

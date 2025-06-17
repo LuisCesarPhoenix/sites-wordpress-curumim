@@ -1,0 +1,19 @@
+.icones-sociais-fixos {
+  position: fixed;
+  top: 40%;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.icones-sociais-fixos a img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+.icones-sociais-fixos a img:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,356 @@
+/*
+Theme Name: Inspiro Child
+Theme URI: https://www.wpzoom.com/themes/inspiro/
+Template: inspiro
+Author: WPZOOM
+Author URI: https://www.wpzoom.com/
+Description: Inspiro is a versatile, ultra-lightweight WordPress theme ideal for small businesses, creative professionals, and visual portfolios. Combining modern aesthetics with lightning-fast performance, it enhances user experience and boosts SEO rankings. Get started instantly with 10+ beautiful starter sites crafted for specific business niches, letting you launch your website quickly. Inspiro features unique fullscreen video backgrounds supporting Vimeo, YouTube, and self-hosted videos, perfect for photography and multimedia projects. It integrates seamlessly with popular page builders (Elementor, Beaver Builder) and WooCommerce, making it effortless to create any type of site, from business and agency websites to online shops and blogs. Fully responsive, GDPR-compliant, and privacy-focused (no external Google fonts), Inspiro looks perfect on every device. Explore more powerful features in our Premium version: https://www.wpzoom.com/themes/inspiro/
+Tags: one-column,two-columns,right-sidebar,flexible-header,custom-colors,custom-header,custom-menu,custom-logo,editor-style,featured-images,footer-widgets,post-formats,rtl-language-support,sticky-post,threaded-comments,translation-ready,e-commerce,wide-blocks,portfolio,blog,custom-background,featured-image-header,full-width-template,theme-options,block-styles,block-patterns
+Version: 2.0.4.1748932111
+Updated: 2025-06-03 03:28:31
+
+*/
+
+.video-custom {
+  width: 25.5cm;       /* Define largura fisicamente aproximada */
+  height: 14cm;        /* Define altura fisicamente aproximada */
+  margin: 0 auto;      /* Centraliza horizontalmente */
+  overflow: hidden;    /* Evita barras de rolagem internas */
+}
+
+.video-custom iframe {
+  width: 100%;         /* Preenche todo o contêiner */
+  height: 100%;        /* Preenche toda a altura do contêiner */
+  display: block;      /* Remove espaços em branco indesejados */
+  border: none;        /* Sem bordas no player */
+}
+
+/* Mobile: até 600px de largura */
+@media (max-width: 600px) {
+  .video-custom {
+    width: 95vw;       /* quase full-viewport width */
+    aspect-ratio: 24 / 13.5;
+  }
+}
+
+/* Tablet: até 900px */
+@media (max-width: 900px) {
+  .video-custom {
+    width: 85vw;
+    aspect-ratio: 24 / 13.5;
+  }
+}
+
+/* Telas largas: até 1200px de largura */
+@media (min-width: 1200px) {
+  .video-custom {
+    max-width: 100%;    /* Pode até limitar em px se quiser */
+  }
+}
+
+.texto-curumim {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #7A7A7A;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-left: 4px solid #0c5b4c;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin: 30px auto;
+  max-width: 900px; /* Limita a largura */
+}
+
+.texto-curumim p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.icones-sociais-fixos {
+  position: fixed;
+  top: 40%;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.icones-sociais-fixos a img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+.icones-sociais-fixos a img:hover {
+  transform: scale(1.1);
+}
+
+.googlemaps {
+  width: 100%;
+  padding-bottom: 2mm;  /* ou use 0mm para encostar totalmente */
+  box-sizing: border-box;
+}
+
+.googlemaps iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  display: block;
+}
+
+.pag-sobre {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #7A7A7A;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin: 30px auto;
+  max-width: 100%; /* Limita a largura */
+}
+
+.pag-sobre p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.aec-abraca {
+  max-width: 100%;
+  margin: 10px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #7A7A7A;
+  background-color: #f9f9f9;
+  border-left: 4px solid #0c5b4c;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  text-align: justify;
+  position: relative;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.aec-abraca.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.aec-toggle {
+  color: #0c5b4c;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  margin-top: 5px;
+  user-select: none;
+}
+
+.aec-toggle::after {
+  content: "▼";
+  font-size: 12px;
+}
+
+.aec-toggle.open::after {
+  content: "▲";
+}
+
+.como-ajudar-pix {
+  width: 100%;
+  height: 327px ; /* Altura mínima, pode ajustar */
+  background-color: #4CAF50;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.como-ajudar-conta {
+  width: 100%;
+  height: 327px ; /* Altura mínima, pode ajustar */
+  background-color: #ff7a00;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+	margin-left: 4px;
+}
+
+.cookie-policy {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: justify;
+}
+
+.cookie-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #05445E;
+  text-align: center;
+}
+
+.cookie-subtitle {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #3498db;
+  border-left: 4px solid #3498db;
+  padding-left: 10px;
+}
+
+.cookie-text {
+  margin-bottom: 15px;
+}
+
+.cookie-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.cookie-list li {
+  margin-bottom: 10px;
+}
+
+body.aviso-privacidade {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.aviso-privacidade {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  text-align: justify;
+}
+
+header h1 {
+  text-align: center;
+  color: #05445E;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: #05445E;
+  margin-top: 2rem;
+}
+
+h2 {
+  color: #189AB4;
+  margin-top: 2rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  color: #189AB4;
+}
+
+ul {
+  margin-left: 1.5rem;
+  list-style: disc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #05445E;
+  color: white;
+  padding: 0.75rem;
+}
+
+td {
+  padding: 0.75rem;
+}
+
+a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav-donate-button a {
+  display: inline-block;
+  background-color: #ff7a00;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-donate-button a:hover {
+  background-color: #e86c00;
+  transform: scale(1.05);
+}
+
+.nav-donate-button {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.pagina-inicial {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #7A7A7A;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-left: 4px solid #ff7a00;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin: 30px auto;
+  max-width: 900px; /* Limita a largura */
+}
+
+.pagina-inicial p {
+  margin-bottom: 15px;
+  text-align: justify;
+}

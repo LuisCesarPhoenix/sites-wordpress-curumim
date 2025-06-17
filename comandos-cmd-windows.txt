@@ -1,0 +1,25 @@
+1. Verificar quem está usando a porta 3306
+
+Pressione Win + R, digite cmd e aperte Enter.
+
+Execute o seguinte comando:
+netstat -aon | findstr :3306
+
+Você verá uma linha parecida com:
+TCP    0.0.0.0:3306     LISTENING       14680
+
+O número no final (14680) é o PID do processo que está usando a porta.
+
+Agora, execute:
+tasklist | findstr 14680
+
+Substitua 14680 pelo PID encontrado. Isso te mostrará qual programa está usando a porta.
+
+2. Encerrar o processo que está usando a porta
+Se for seguro, encerre o processo no Gerenciador de Tarefas (Ctrl + Shift + Esc).
+
+Na barra de pesquisa do gerenciador de tarefas pesquise pelo PID 14680.
+
+Clique com o botão direito em cima dele e em finalizar tarefa. 
+
+
